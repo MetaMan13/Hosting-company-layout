@@ -1,0 +1,110 @@
+.landing{
+    background: url('../../mobile.webp');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+
+    &-overlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: $black;
+        opacity: 0.9;
+        height: 70vh;
+        width: 100%;
+        z-index: 1;
+    }
+
+    &-content{
+        position: relative;
+        z-index: 2;
+        height: 80%;
+        width: 80%;
+        align-self: end;
+        justify-self: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        &-header, &-subheader, &-text, &-button{
+            width: 100%;
+            color: $white;
+
+            h1{
+                font-size: 3.2em;
+                font-weight: map-get($font-weight, "bold");
+                
+                span{
+                    color: $mlorange;
+                }
+            }
+            
+            h3{
+                font-size: 2.4em;
+                color: darken($white, 10%);
+                margin-top: 0.2em;
+                font-weight: map-get($font-weight, "medium");
+            }
+            
+            p{
+                font-weight: map-get($font-weight, "regular");
+                margin-top: 0.4em;
+                font-size: 1.6em;
+                color: darken($white, 15%);
+            }
+            
+            button{
+                font-weight: map-get($font-weight, "regular");
+                margin-top: 0.6em;
+                font-size: 2em;
+                padding: 0.4em;
+                border: none;
+                outline: none;
+                background: $mlorange;
+                color: $white;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .landing{
+
+
+        &-content{
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            height: 100%;
+
+            &-header,&-subheader, &-text, &-button{
+                width: 60%;
+
+                h1{
+                    font-size: 4em;
+                }
+
+                h3{
+                    font-size: 3.6em;
+                }
+
+                p{
+                    font-size: 2em;
+                }
+
+                button{
+                    font-size: 2.4em;
+                    background: $mlorange;
+                }
+            }
+
+        }
+    }
+}

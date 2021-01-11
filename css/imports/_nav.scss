@@ -1,0 +1,138 @@
+.nav{
+    height: 7vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 10% auto;
+    align-items: center;
+    position: fixed;
+    z-index: 3;
+    background: $black;
+    color: $white;
+
+    &-mobile{
+        justify-self: start;
+        &-icon{
+            i{
+                font-size: 1.8em;
+                margin-left: 0.5em;
+            }
+        }
+        &-menu{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 60% auto;
+            grid-template-rows: 7% auto;
+            grid-template-areas: 
+            "exit lay"
+            "item lay";
+            display: none;
+
+            &-exit{
+                grid-area: exit;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+
+                i{
+                    font-size: 1.8em;
+                    margin-left: 0.5em;
+                }
+            }
+            
+            &-items{
+                grid-area: item;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+
+                &-item{
+                    background: lighten($black, 10%);
+                    width: 100%;
+                    margin-bottom: 1em;
+                    padding: 0.5em 0em;
+
+                    a{
+                        font-size: 1.8em;
+                        margin-left: 0.5em;
+                        text-decoration: none;
+                        color: $white;
+                    }
+                }
+            }
+
+            &-overlay{
+                grid-area: lay;
+                opacity: 0.5;
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+
+    &-logo{
+        justify-self: center;
+        margin-right: 10%;
+
+        h3{
+            margin-top: 0.1em;
+            font-size: 1.8em;
+            color: $white;
+            
+            span{
+                color: $mlorange;
+            }
+        }
+    }
+
+    &-menu{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .nav{
+        grid-template-columns: 1fr 1fr;
+
+        &-mobile{
+            display: none;
+        }
+
+        &-logo{
+            align-self: center;
+            justify-self: start;
+            margin-left: 10%;
+        }
+
+        &-menu{
+            display: block;
+            height: 100%;
+            width: 90%;
+
+            ul{
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+
+                li{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    a{
+                        text-decoration: none;
+                        font-size: 1.6em;
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+}
