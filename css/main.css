@@ -204,7 +204,7 @@ img {
 }
 
 .landing {
-  background: url("../../mobile.webp");
+  background: url("./../../mobile.webp");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
