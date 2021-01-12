@@ -14,7 +14,7 @@
         top: 0;
         left: 0;
         background: $black;
-        opacity: 0.8;
+        opacity: 0.9;
         height: 70vh;
         width: 100%;
         z-index: 1;
@@ -76,7 +76,8 @@
             }
 
             button:focus,button:hover{
-                background: darken($mlorange, 10%);
+                background: $white;
+                color: $black;
             }
         }
     }

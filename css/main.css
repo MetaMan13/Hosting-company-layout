@@ -241,7 +241,7 @@ img {
   top: 0;
   left: 0;
   background: #282827;
-  opacity: 0.8;
+  opacity: 0.9;
   height: 70vh;
   width: 100%;
   z-index: 1;
@@ -318,7 +318,8 @@ img {
 }
 
 .landing-content-header button:focus, .landing-content-header button:hover, .landing-content-subheader button:focus, .landing-content-subheader button:hover, .landing-content-text button:focus, .landing-content-text button:hover, .landing-content-button button:focus, .landing-content-button button:hover {
-  background: #cb6406;
+  background: #ffffff;
+  color: #282827;
 }
 
 @media screen and (min-width: 767px) {
@@ -392,10 +393,239 @@ img {
   }
 }
 
+.services {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.services-container {
+  width: 80%;
+  height: 95%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (1fr)[3];
+      grid-template-rows: repeat(3, 1fr);
+  grid-gap: 2em;
+}
+
+.services-container-item {
+  background: #353534;
+  border-radius: 0.6em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 30% auto 15%;
+      grid-template-rows: 30% auto 15%;
+}
+
+.services-container-item-name {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 40% auto;
+      grid-template-rows: 40% auto;
+      grid-template-areas: "icon" "title";
+  background: #282827;
+  border-top-left-radius: 0.6em;
+  border-top-right-radius: 0.6em;
+}
+
+.services-container-item-name-header {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: title;
+}
+
+.services-container-item-name-icon {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: icon;
+  -ms-flex-item-align: end;
+      align-self: end;
+}
+
+.services-container-item-name-header, .services-container-item-name-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #ffffff;
+}
+
+.services-container-item-name-header h3, .services-container-item-name-icon h3 {
+  font-size: 2.4em;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.services-container-item-name-header i, .services-container-item-name-icon i {
+  font-size: 2.4em;
+}
+
+.services-container-item-info {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (1fr)[4];
+      grid-template-rows: repeat(4, 1fr);
+}
+
+.services-container-item-info-item {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 20% auto;
+      grid-template-columns: 20% auto;
+      grid-template-areas: "icon tile";
+  color: #ffffff;
+}
+
+.services-container-item-info-item-name {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: tile;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.services-container-item-info-item-name h5 {
+  font-size: 1.4em;
+  font-weight: 500;
+  color: #f2f2f2;
+}
+
+.services-container-item-info-item-icon {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: icon;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.services-container-item-info-item-icon i {
+  font-size: 1.4em;
+  color: #1E655D;
+}
+
+.services-container-item-action {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.services-container-item-action button {
+  font-weight: 500;
+  font-size: 1.6em;
+  padding: 0.6em;
+  border: none;
+  outline: none;
+  border-radius: 0.6em;
+  background: #F87D0C;
+  color: #ffffff;
+  cursor: pointer;
+  border-radius: 0.6em;
+  -webkit-transition: ease;
+  transition: ease;
+  -webkit-transition: ease-in-out;
+  transition: ease-in-out;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
+}
+
+.services-container-item-action button:focus, .services-container-item-action button:hover {
+  background: #ffffff;
+  color: #282827;
+}
+
+@media screen and (min-width: 767px) {
+  .services-container {
+    width: 50%;
+  }
+  .services-container-item-name-header h3, .services-container-item-name-icon h3 {
+    font-size: 2.6em;
+  }
+  .services-container-item-name-header i, .services-container-item-name-icon i {
+    font-size: 2.6em;
+  }
+  .services-container-item-info-item-name h5 {
+    font-size: 1.6em;
+  }
+  .services-container-item-info-item-icon i {
+    font-size: 1.6em;
+  }
+  .services-container-item-action button {
+    font-size: 1.8em;
+    padding: 0.6em;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .services-container {
+    height: 80%;
+    width: 75%;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+    grid-gap: 2.4em;
+  }
+  .services-container-item {
+    height: 100%;
+  }
+  .services-container-item-name-header h3, .services-container-item-name-icon h3 {
+    font-size: 2.8em;
+  }
+  .services-container-item-name-header i, .services-container-item-name-icon i {
+    font-size: 2.8em;
+  }
+  .services-container-item-info-item-name h5 {
+    font-size: 1.8em;
+  }
+  .services-container-item-info-item-icon i {
+    font-size: 1.8em;
+  }
+  .services-container-item-action button {
+    font-size: 2em;
+    padding: 0.6em;
+  }
+}
+
 .container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 70vh 100vh;
-      grid-template-rows: 70vh 100vh;
+  -ms-grid-rows: 70vh 150vh;
+      grid-template-rows: 70vh 150vh;
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    -ms-grid-rows: 70vh 70vh;
+        grid-template-rows: 70vh 70vh;
+  }
 }
 /*# sourceMappingURL=main.css.map */

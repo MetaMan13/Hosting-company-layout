@@ -1,0 +1,218 @@
+.services{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-container{
+        width: 80%;
+        height: 95%;
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap: 2em;
+
+        &-item{
+            background: lighten($black, 5%);
+            border-radius: 0.6em;
+            display: grid;
+            grid-template-rows: 30% auto 15%;
+
+            &-name{
+                display: grid;
+                grid-template-rows: 40% auto;
+                grid-template-areas: 
+                "icon"
+                "title";
+                background: $black;
+                border-top-left-radius: 0.6em;
+                border-top-right-radius: 0.6em;
+
+                &-header{
+                    grid-area: title;
+                }
+
+                &-icon{
+                    grid-area: icon;
+                    align-self: end;
+                }
+
+                &-header, &-icon{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: $white;
+
+                    h3{
+                        font-size: 2.4em;
+                        font-weight: map-get($font-weight, "bold");
+                        letter-spacing: 0.04em;
+                    }
+
+                    i{
+                        font-size: 2.4em;
+                    }
+                }
+            }
+
+            &-info{
+                display: grid;
+                grid-template-rows: repeat(4, 1fr);
+
+                &-item{
+                    display: grid;
+                    grid-template-columns: 20% auto;
+                    grid-template-areas: "icon tile";
+                    color: $white;
+                    
+
+                    &-name{
+                        grid-area: tile;
+                        display: flex;
+                        align-items: center;
+                        
+                        h5{
+                            font-size: 1.4em;
+                            font-weight: map-get($font-weight, "medium");
+                            color: darken($white, 5%);
+                        }
+                    }
+                    
+                    &-icon{
+                        grid-area: icon;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        
+                        i{
+                            font-size: 1.4em;
+                            color: $blue;
+                        }
+                    }
+                }
+            }
+
+            &-action{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                button{
+                    font-weight: map-get($font-weight, "medium");
+                    font-size: 1.6em;
+                    padding: 0.6em;
+                    border: none;
+                    outline: none;
+                    border-radius: 0.6em;
+                    background: $mlorange;
+                    color: $white;
+                    cursor: pointer;
+                    border-radius: 0.6em;
+                    transition: ease;
+                    transition: ease-in-out;
+                    transition-duration: 300ms;
+                }
+
+                button:focus,button:hover{
+                    background: $white;
+                    color: $black;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 767px){
+    .services{
+        &-container{
+            width: 50%;
+
+            &-item{
+                &-name{
+                    &-header, &-icon{
+                        h3{
+                            font-size: 2.6em;
+                        }
+
+                        i{
+                            font-size: 2.6em;
+                        }
+                    }
+                }
+
+                &-info{
+                    &-item{
+                        &-name{
+                            h5{
+                                font-size: 1.6em;
+                            }
+                        }
+
+                        &-icon{
+                            i{
+                                font-size: 1.6em;
+                            }
+                        }
+                    }
+                }
+
+                &-action{
+                    button{
+                        font-size: 1.8em;
+                        padding: 0.6em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .services{
+
+        &-container{
+            height: 80%;
+            width: 75%;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 1fr;
+            grid-gap: 2.4em;
+
+            &-item{
+                height: 100%;
+
+                &-name{
+                    &-header,&-icon{
+                        h3{
+                            font-size: 2.8em;
+                        }
+
+                        i{
+                            font-size: 2.8em;
+                        }
+                    }
+                }
+
+                &-info{
+                    &-item{
+                        &-name{
+                            h5{
+                                font-size: 1.8em;
+                            }
+                        }
+
+                        &-icon{
+                            i{
+                                font-size: 1.8em;
+                            }
+                        }
+                    }
+                }
+
+                &-action{
+                    button{
+                        font-size: 2em;
+                        padding: 0.6em;
+                    }
+                }
+            }
+        }
+    }
+}
