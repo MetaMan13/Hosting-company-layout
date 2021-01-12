@@ -94,6 +94,25 @@
     }
 }
 
+@media screen and (min-width:767px){
+    .nav{
+
+        &-mobile{
+            &-icon{
+                i{
+                    font-size: 2em;
+                }
+            }
+        }
+
+        &-logo{
+            h3{
+                font-size: 2em;
+            }
+        }
+    }
+}
+
 @media screen and (min-width: 1024px){
     .nav{
         grid-template-columns: 1fr 1fr;
@@ -106,6 +125,10 @@
             align-self: center;
             justify-self: start;
             margin-left: 10%;
+
+            h3{
+                font-size: 2.2em;
+            }
         }
 
         &-menu{
@@ -130,6 +153,12 @@
                         text-decoration: none;
                         font-size: 1.6em;
                         color: $white;
+                        transition: ease-in-out;
+                        transition-duration: 300ms;
+                    }
+
+                    a:focus, a:hover{
+                        color: $mlorange;
                     }
                 }
             }

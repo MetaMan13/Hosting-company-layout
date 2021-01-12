@@ -150,6 +150,15 @@ img {
   display: none;
 }
 
+@media screen and (min-width: 767px) {
+  .nav-mobile-icon i {
+    font-size: 2em;
+  }
+  .nav-logo h3 {
+    font-size: 2em;
+  }
+}
+
 @media screen and (min-width: 1024px) {
   .nav {
     -ms-grid-columns: 1fr 1fr;
@@ -165,6 +174,9 @@ img {
     -ms-grid-column-align: start;
         justify-self: start;
     margin-left: 10%;
+  }
+  .nav-logo h3 {
+    font-size: 2.2em;
   }
   .nav-menu {
     display: block;
@@ -200,6 +212,13 @@ img {
     text-decoration: none;
     font-size: 1.6em;
     color: #ffffff;
+    -webkit-transition: ease-in-out;
+    transition: ease-in-out;
+    -webkit-transition-duration: 300ms;
+            transition-duration: 300ms;
+  }
+  .nav-menu ul li a:focus, .nav-menu ul li a:hover {
+    color: #F87D0C;
   }
 }
 
@@ -222,7 +241,7 @@ img {
   top: 0;
   left: 0;
   background: #282827;
-  opacity: 0.95;
+  opacity: 0.8;
   height: 70vh;
   width: 100%;
   z-index: 1;
@@ -289,9 +308,62 @@ img {
   background: #F87D0C;
   color: #ffffff;
   cursor: pointer;
+  border-radius: 0.6em;
+  -webkit-transition: ease;
+  transition: ease;
+  -webkit-transition: ease-in-out;
+  transition: ease-in-out;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
+}
+
+.landing-content-header button:focus, .landing-content-header button:hover, .landing-content-subheader button:focus, .landing-content-subheader button:hover, .landing-content-text button:focus, .landing-content-text button:hover, .landing-content-button button:focus, .landing-content-button button:hover {
+  background: #cb6406;
+}
+
+@media screen and (min-width: 767px) {
+  .landing {
+    background: url("./../../tablet.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  .landing-content {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 50%;
+    height: 100%;
+  }
+  .landing-content-header, .landing-content-subheader, .landing-content-text, .landing-content-button {
+    width: 80%;
+  }
+  .landing-content-header h1, .landing-content-subheader h1, .landing-content-text h1, .landing-content-button h1 {
+    font-size: 3.6em;
+  }
+  .landing-content-header h3, .landing-content-subheader h3, .landing-content-text h3, .landing-content-button h3 {
+    font-size: 3.2em;
+  }
+  .landing-content-header p, .landing-content-subheader p, .landing-content-text p, .landing-content-button p {
+    font-size: 1.8em;
+  }
+  .landing-content-header button, .landing-content-subheader button, .landing-content-text button, .landing-content-button button {
+    font-size: 2.2em;
+  }
 }
 
 @media screen and (min-width: 1024px) {
+  .landing {
+    background: url("./../../desktop.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
   .landing-content {
     -webkit-box-pack: center;
         -ms-flex-pack: center;

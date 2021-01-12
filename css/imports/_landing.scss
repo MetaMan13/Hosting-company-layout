@@ -14,7 +14,7 @@
         top: 0;
         left: 0;
         background: $black;
-        opacity: 0.95;
+        opacity: 0.8;
         height: 70vh;
         width: 100%;
         z-index: 1;
@@ -69,6 +69,51 @@
                 background: $mlorange;
                 color: $white;
                 cursor: pointer;
+                border-radius: 0.6em;
+                transition: ease;
+                transition: ease-in-out;
+                transition-duration: 300ms;
+            }
+
+            button:focus,button:hover{
+                background: darken($mlorange, 10%);
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 767px){
+    .landing{
+        background: url('./../../tablet.webp');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+
+        &-content{
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            height: 100%;
+
+            &-header, &-subheader, &-text, &-button{
+                width: 80%;
+
+                h1{
+                    font-size: 3.6em;
+                }
+
+                h3{
+                    font-size: 3.2em;
+                }
+
+                p{
+                    font-size: 1.8em;
+                }
+
+                button{
+                    font-size: 2.2em;
+                }
             }
         }
     }
@@ -76,7 +121,11 @@
 
 @media screen and (min-width: 1024px){
     .landing{
-
+        background: url('./../../desktop.webp');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
 
         &-content{
             justify-content: center;
