@@ -39,6 +39,7 @@
             h1{
                 font-size: 3.2em;
                 font-weight: map-get($font-weight, "bold");
+                letter-spacing: 0.06em;
                 
                 span{
                     color: $mlorange;

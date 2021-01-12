@@ -4,14 +4,21 @@
 @import './imports/nav';
 @import './imports/landing';
 @import './imports/services';
+@import './imports/about-us';
 
 .container{
     display: grid;
-    grid-template-rows: 70vh 150vh;
+    grid-template-rows: 70vh 150vh 70vh;
+}
+
+@media screen and(min-width: 767px){
+    .container{
+        grid-template-rows: 70vh 150vh 50vh;
+    }
 }
 
 @media screen and (min-width: 1024px){
     .container{
-        grid-template-rows: 70vh 70vh;
+        grid-template-rows: 70vh 70vh 70vh;
     }
 }
