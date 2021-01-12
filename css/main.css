@@ -323,7 +323,7 @@ img {
 
 @media screen and (min-width: 767px) {
   .landing {
-    background: url("./../../tablet.webp");
+    background: url("https://metaman13.github.io/Hosting-company-layout/tablet.webp");
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -358,7 +358,7 @@ img {
 
 @media screen and (min-width: 1024px) {
   .landing {
-    background: url("./../../desktop.webp");
+    background: url("https://metaman13.github.io/Hosting-company-layout/desktop.webp");
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
