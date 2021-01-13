@@ -1,0 +1,115 @@
+.partners{
+    display: grid;
+    grid-template-rows: 20% auto;
+
+    &-header{
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        h3{
+            font-size: 2.8em;
+            color: $white;
+            font-weight: map-get($font-weight, "bold");
+            letter-spacing: 0.04em;
+        }
+    }
+
+
+    &-container{
+        width: 80%;
+        height: 95%;
+        display: grid;
+        grid-template-rows: repeat(5,1fr);
+        align-items: flex-end;
+        justify-content: center;
+        justify-self: center;
+
+        &-item{
+            i{
+                font-size: 3.6em;
+                color: $white;
+                color: darken($white, 10%);
+            }
+        }
+
+        &-item:first-child{
+            i{
+                color: #00457C;
+            }
+        }
+
+        &-item:nth-child(2){
+            i{
+                color: #DB4437;
+            }
+        }
+
+        &-item:nth-child(3){
+            i{
+                color: #F4B400;
+            }
+        }
+
+        &-item:nth-child(4){
+            i{
+                color: #FF9900;
+            }
+        }
+
+        &-item:nth-child(5){
+            i{
+                color: darken($white, 10%);
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 767px){
+    .partners{
+        grid-template-rows: 50% auto;
+
+        &-header{
+            align-items: flex-start;
+        }
+
+        &-container{
+            height: 100%;
+            grid-template-columns: repeat(5, 1fr);
+
+            &-item{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                i{
+                    font-size: 4em;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .partners{
+        grid-template-rows: 50% auto;
+
+        &-header{
+            align-items: flex-start;
+        }
+
+        &-container{
+            height: 100%;
+            grid-template-columns: repeat(5, 1fr);
+
+            &-item{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                i{
+                    font-size: 4.4em;
+                }
+            }
+        }
+    }
+}

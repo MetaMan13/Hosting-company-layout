@@ -72,32 +72,26 @@
 @media screen and (min-width: 1024px){
     .about-us{
         display: grid;
-        grid-template-columns: 50% 50%;
-        grid-template-rows: 20% auto;
-        grid-template-areas: 
-        "header header"
-        "text image";
+        grid-template-rows: 30% auto;
 
         &-header{
-            grid-area: header;
             width: 75%;
             justify-self: center;
-            justify-content: flex-start;
+            justify-content: center;
             
             h3{
-                font-size: 3.4em;
+                font-size: 3.8em;
             }
         }
-
+        
         &-text{
-            grid-area: text;
-            justify-self: end;
+            justify-self: center;
             width: 75%;
-
+            
             p:first-child{
                 display: none;
             }
-
+            
             p:nth-child(2){
                 display: none;
             }
