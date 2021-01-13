@@ -12,6 +12,12 @@
     grid-template-rows: 70vh 150vh 70vh 80vh;
 }
 
+@media screen and (min-width: 375px){
+    .container{
+        grid-template-rows: 70vh 150vh 60vh 70vh;
+    }
+}
+
 @media screen and(min-width: 767px){
     .container{
         grid-template-rows: 70vh 150vh 50vh 20vh;

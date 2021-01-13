@@ -70,6 +70,10 @@
 
         &-header{
             align-items: flex-start;
+
+            h3{
+                font-size: 3.3em;
+            }
         }
 
         &-container{
@@ -95,17 +99,22 @@
 
         &-header{
             align-items: flex-start;
+
+            h3{
+                font-size: 3.8em;
+            }
         }
 
         &-container{
             height: 100%;
             grid-template-columns: repeat(5, 1fr);
+            width: 60%;
 
             &-item{
                 display: flex;
                 justify-content: center;
                 align-items: center;
-
+                
                 i{
                     font-size: 4.4em;
                 }
